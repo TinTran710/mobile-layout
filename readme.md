@@ -1,4 +1,4 @@
-## Mkcert installation
+# Mkcert installation
 
 ### Golang
 Golang1.10+ is needed when we build mkcert
@@ -14,7 +14,7 @@ sudo tar -xvf go1.10.linux-amd64.tar.gz
 ```
 sudo mv go /usr/local
 ```
-- Setup Go enviroment: put this in ~/.profile:
+- Setup Go enviroment: put this in `~/.profile`:
 ```
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Projects/ADMFactory/Golang
@@ -40,12 +40,12 @@ cd mkcert-1.0.0/bin/
 cp mkcert /usr/bin/
 ```
 
-### Generate local CA:
+### Generate local CA
 ```
 mkcert -install
 ```
 
-### Generate local development certificate:
+### Generate local development certificate
 ```
 mkcert localhost
 ```
@@ -57,7 +57,7 @@ sudo cp /root/localhost.pem /etc/ssl/certs/
 sudo cp /root/localhost-key.pem /etc/ssl/private/
 ```
 
-### Edit the default SSL file at `/etc/apache2/sites-available/default-ssl.conf` with our locally generated SSL certificate and key details as below:
+### Edit the default SSL file at `/etc/apache2/sites-available/default-ssl.conf` with our locally generated SSL certificate and key details as below
 ```
 SSLCertificateFile /etc/ssl/certs/localhost.pem
 SSLCertificateKeyFile /etc/ssl/private/localhost-key.pem
